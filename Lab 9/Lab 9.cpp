@@ -19,13 +19,13 @@ struct Konto {
 	int saldo;
 };
 
-int poleprostokata(int x, int y);
+int poleprostokata(Zadanie2 prostokat);
 void funkcja(Trojkat trojkat_1, Trojkat* trojkat_2);
 void zaktualizuj(Konto noweDane, Konto* stareKonto);
 
 
 int main() {
-	/*
+	
 	//zadanie 1
 	Zadanie1 zmienna;
 	zmienna.x = 10;
@@ -34,12 +34,11 @@ int main() {
 	cout << zmienna.x << "\t" << zmienna.y << endl;
 
 	//zadanie 2
-	//sprobuj zobic tez innym sposobem - obiekt struktury jako argument funkcji
 	Zadanie2 prostokat;
 	prostokat.a = 10;
 	prostokat.b = 20;
 
-	cout << poleprostokata(prostokat.a, prostokat.b) << endl;
+	cout << poleprostokata(prostokat) << endl;
 
 	//zadanie 3
 	Trojkat trojkat_1;
@@ -49,7 +48,7 @@ int main() {
 	trojkat_2 = { 5,6,8 };
 	
 	funkcja(trojkat_1, &trojkat_2);
-	*/
+	
 	//zadanie 4*
 	Konto noweDane = {1315, 11000 };
 	Konto stareKonto = { 1315, 500 };
@@ -66,6 +65,6 @@ void funkcja(Trojkat trojkat_1, Trojkat* trojkat_2) {
 	trojkat_2->b = trojkat_1.b;
 	trojkat_2->c = trojkat_1.c;
 }
-int poleprostokata(int x, int y) {
-	return x * y;
+int poleprostokata(Zadanie2 prostokat) {
+	return prostokat.a*prostokat.b;
 }
